@@ -15,7 +15,7 @@ public class GoogleAPIConnection {
         System.out.println("Digite o nome do livro que deseja encontrar:");
         String livro = leitor.nextLine().toLowerCase().replaceAll("\\s","+" );
 
-        var key = "AIzaSyCvs9nYyE34jPr1wuMghGlMUBFAWnLyoG4";
+        var key = "YOUR_KEY";
         var endereco = "https://www.googleapis.com/books/v1/volumes?q="  + livro +  "+intitle:keyes&key=" + key;
 
 
