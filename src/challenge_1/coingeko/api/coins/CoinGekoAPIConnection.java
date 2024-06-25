@@ -1,4 +1,4 @@
-package com.googleapis.books;
+package challenge_1.coingeko.api.coins;
 
 import java.io.IOException;
 import java.net.URI;
@@ -7,16 +7,15 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.Scanner;
 
-public class GoogleAPIConnection {
+public class CoinGekoAPIConnection {
     public static void main(String[] args) throws IOException, InterruptedException {
 
-
         Scanner leitor = new Scanner(System.in);
-        System.out.println("Digite o nome do livro que deseja encontrar:");
-        String livro = leitor.nextLine().toLowerCase().replaceAll("\\s","+" );
+        System.out.println("Digite qual criptomoeda deseja saber a cotação: ");
+        String criptomoeda = leitor.nextLine().toLowerCase();
 
-        var key = "AIzaSyCvs9nYyE34jPr1wuMghGlMUBFAWnLyoG4";
-        var endereco = "https://www.googleapis.com/books/v1/volumes?q="  + livro +  "+intitle:keyes&key=" + key;
+        //String endereco = "https://api.coingecko.com/api/v3/coins/" + criptomoeda + "/tickers";
+        String endereco = "https://api.coingecko.com/api/v3/simple/price?ids=" + criptomoeda + "&vs_currencies=usd";
 
 
         HttpClient client = HttpClient.newBuilder().build();
@@ -24,5 +23,6 @@ public class GoogleAPIConnection {
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
         System.out.println(response.body());
+
     }
 }
