@@ -1,0 +1,4 @@
+Conteúdo a ser gravado no arquivo.{
+  "nome": "Avatar",
+  "descricao": "Jake Sully (Sam Worthington) ficou paraplégico após um combate na Terra. Quando seu irmão morre, Jake é selecionado para substituí-lo no programa Avatar e viaja a Pandora, uma lua extraterrestre, onde encontra diversas formas de vida."
+}
